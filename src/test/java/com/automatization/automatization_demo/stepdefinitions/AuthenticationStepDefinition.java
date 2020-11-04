@@ -1,8 +1,8 @@
 package com.automatization.automatization_demo.stepdefinitions;
 
+import com.automatization.automatization_demo.certificacion.tasks.WriteDocumentNumberTask;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
-import cucumber.api.java.en.When;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
 import net.serenitybdd.screenplay.actions.Open;
@@ -25,8 +25,8 @@ public class AuthenticationStepDefinition {
     }
 
     @And("The user authenticates")
-    public void authenticateUser(Map<String, Object> map) {
-
+    public void authenticateUser(Map<String, String> map) {
+        this.actor.attemptsTo(WriteDocumentNumberTask.writeDocumentNumberTask(map.get("documentNumber")));
     }
 
 }

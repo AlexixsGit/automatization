@@ -10,7 +10,7 @@ public class AuthenticationPage extends PageObject {
     public static final Target LIST_BOX_DOCUMENT_TYPE = Target.the("document type list")
             .located(By.xpath("//span[@class=\"mat-select-placeholder ng-tns-c6-2 ng-star-inserted\"]"));
     public static final Target LIST_BOX_DOCUMENT_TYPE_CC = Target.the("CC. document type")
-            .located(By.xpath("//span[@class=\"ng-tns-c6-2 ng-star-inserted\"]"));
+            .located(By.id("item-documentType-login-CC"));
     public static final Target INPUT_DOCUMENT_NUMBER = Target.the("document number")
             .located(By.id("input-documentId-login"));
     public static final Target BUTTON_CONTINUE = Target.the("button continue")
