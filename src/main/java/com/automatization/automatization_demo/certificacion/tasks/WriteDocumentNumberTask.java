@@ -19,7 +19,8 @@ public class WriteDocumentNumberTask implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(Click.on(LIST_BOX_DOCUMENT_TYPE), Click.on(LIST_BOX_DOCUMENT_TYPE_CC),
-                Click.on(INPUT_DOCUMENT_NUMBER), Enter.theValue(this.documentNumber).into(INPUT_DOCUMENT_NUMBER));
+                Click.on(INPUT_DOCUMENT_NUMBER), Enter.theValue(this.documentNumber).into(INPUT_DOCUMENT_NUMBER),
+                Click.on(BUTTON_CONTINUE));
     }
 
     public static WriteDocumentNumberTask writeDocumentNumberTask(String documentNumber) {
