@@ -8,7 +8,7 @@ Feature: Basic example of authentication
     When The user authenticates
       | documentNumber | <documentNumber> |
       | password       | <password>       |
-    #Then Should see the main page
+    Then Should see the main page
 
     Examples:
       | documentNumber | password |
